@@ -1,0 +1,15 @@
+open xampp folder->send email->sendmail.ini
+
+smtp_server=smtp.gmail.com
+smtp_port=465 or 587
+smtp_ssl=ssl
+auth_username="yourgmail@gmail.com"
+auth_password="****"
+
+open xampp folder->php->php.ini
+search [mail function]
+change SMTP=smtp.gmail.com to ;SMTP=smtp.gmail.com
+change smtp_port=25 to ; smtp_port=25
+
+change ;sendmail_from="email" to sendmail_from="yourgmail@gmail.com"
+change sendmail_path="" to ;sendmail_path ="C:\xampp\sendmail\sendmail.exe -t
